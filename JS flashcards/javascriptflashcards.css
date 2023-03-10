@@ -1,0 +1,150 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    list-style: none;
+    text-decoration: none;
+    transition: 300ms;
+}
+h1 {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+h2 {
+    font-size: clamp(1.2rem, 3.5vw, 1.6rem);
+}
+h3 {
+    font-size: clamp(1rem, 3.5vw, 1.4rem);
+}
+p {
+    font-size: clamp(.8rem, 3.5vw, 1.1rem);
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #16171E;
+    color: #F3F1D0;
+
+}
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+a {
+    color: black;
+    cursor: pointer;
+}
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1.5em 1em;
+    line-height: 1.5;
+    overflow: hidden;
+}
+.header-text {
+    border-radius: 10px;
+    background-color: #368474;
+    text-align: center;
+    width: 350px;
+    height: 400px;
+    transform: rotateZ(-5deg);
+
+}
+.header-subtext {
+    border-radius: 10px;
+    background-color: #C75D14;
+    padding: 1em;
+    width: 250px;
+    height: 325px;
+    transform: rotateZ(10deg);
+}
+.header-text, .header-subtext {
+    border-radius: 10px;
+    border: #F3F1D0 double 3px;
+}
+.header-subtext h3 {
+    padding-bottom: 1em;
+}
+header h1,h2{
+    padding-bottom: 1.5em;   
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.flashcard-cont {
+    width: 300px;
+    height: 450px;
+    margin: 80px auto;
+    perspective: 1400px;
+
+}
+.flashcard  {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+
+}
+.flashcard-front {
+    background-color: #7B5096;
+    
+}
+.flashcard-back {
+    background-color: #218897;
+    transform: rotateY(180deg);
+
+   
+}
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: #F3F1D0 double 2px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    backface-visibility: hidden;
+
+}
+.flashcard p {
+    font-style: italic;
+}
+.bold {
+    font-size: clamp(1.7rem, 3.5vw, 2.2rem);
+    font-weight: 700;
+}
+.info-card-1, 
+.info-card-2, 
+.info-card-3, 
+.info-card-4 {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    border: #F3F1D0 double 3px;
+}
+.info-card-1 {
+    background-color: #CC4B7F;
+}
+.info-card-2 {
+    background-color: #266D92;
+}
+.info-card-3 {
+    background-color: #95861E;
+}
+.info-card-4 {
+    background-color: #D14A3C;
+}
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+  }  
+}
