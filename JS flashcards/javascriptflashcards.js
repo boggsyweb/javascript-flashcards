@@ -1,6 +1,5 @@
 import { cards } from './data.js'
 
-
 const flashCard = document.querySelector(".flashcard")
 let playing = false
 
@@ -20,3 +19,22 @@ flashCard.addEventListener('click',function() {
     }
   })
 })
+
+const levelOne = document.getElementById('level-1')
+const levelTwo = document.getElementById('level-2')
+const levelThree = document.getElementById('level-3')
+const startButton = document.getElementById('start-btn')
+
+
+levelTwo.addEventListener('change', comingSoon)
+levelThree.addEventListener('change', comingSoon)
+
+function comingSoon() {
+  document.getElementById('coming-soon').style.display = 'inline'
+  levelOne.checked =true
+}
+startButton.addEventListener('click', renderCards)
+
+function renderCards(){
+  
+}

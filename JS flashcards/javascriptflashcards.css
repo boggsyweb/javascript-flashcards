@@ -29,7 +29,7 @@ body {
     color: #F3F1D0;
 
 }
-img, picture, svg, video {
+img, picture, svg, video  {
     display: block;
     max-width: 100%;
 }
@@ -40,16 +40,16 @@ a {
 header {
     display: flex;
     justify-content: center;
-    padding: 1.5em 1em;
     line-height: 1.5;
     overflow: hidden;
+    padding: 3em;
 }
 .header-text {
     border-radius: 10px;
     background-color: #368474;
     text-align: center;
     width: 350px;
-    height: 400px;
+    padding: 0 .7em;
     transform: rotateZ(-5deg);
 
 }
@@ -58,7 +58,6 @@ header {
     background-color: #C75D14;
     padding: 1em;
     width: 250px;
-    height: 325px;
     transform: rotateZ(10deg);
 }
 .header-text, .header-subtext {
@@ -68,25 +67,34 @@ header {
 .header-subtext h3 {
     padding-bottom: 1em;
 }
-header h1,h2{
-    padding-bottom: 1.5em;   
+header h1{
+    padding-bottom: 2em;   
 }
-
+.header-text h2 {
+    padding-bottom: 4em;
+}
 main {
     display: flex;
-    flex-direction: column;
+    padding: 3em 1em;
+    overflow: scroll;
+    width: 400px;
+    margin: 0 auto;
+    scroll-snap-type: x mandatory;
 }
+.flashcard-info {
+    margin: auto 3.5em auto 3.5em;
+    scroll-snap-align: center;
 
+}
 .flashcard-cont {
     width: 300px;
     height: 450px;
-    margin: 80px auto;
+    margin: auto;
     perspective: 1400px;
 
 }
 .flashcard  {
     position: relative;
-    text-align: center;
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
@@ -109,42 +117,73 @@ main {
     border-radius: 10px;
     border: #F3F1D0 double 2px;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
     backface-visibility: hidden;
 
 }
-.flashcard p {
-    font-style: italic;
-}
+
 .bold {
     font-size: clamp(1.7rem, 3.5vw, 2.2rem);
     font-weight: 700;
 }
-.info-card-1, 
-.info-card-2, 
-.info-card-3, 
-.info-card-4 {
+.flashcard-front, .flashcard-back, .info-card {
+    padding: 1.5em 1em;
+}
+
+i {
+    font-size: 1.5em;
+    float: right;
+}
+button:hover,
+i:hover {
+    transform: scale(1.1);
+    transition: 300ms;
+}
+.info-card {
     width: 300px;
-    height: 400px;
+    height: 450px;
     border-radius: 10px;
     border: #F3F1D0 double 3px;
+   
 }
-.info-card-1 {
+#info-card-1 {
     background-color: #CC4B7F;
 }
-.info-card-2 {
+#info-card-2 {
     background-color: #266D92;
 }
-.info-card-3 {
+#info-card-3 {
     background-color: #95861E;
 }
-.info-card-4 {
+#info-card-4 {
     background-color: #D14A3C;
 }
+#coming-soon {
+    display: none;
+    font-size: 1rem;
+    color: #CC4B7F;
+    text-align: center;
+}
+#lets-go {
+    background: #218897;
+    color: #F3F1D0;
+    border: none;
+    border-radius: 10px;
+    padding: .3em;
+    cursor: pointer;
+}
+
 @media (max-width: 650px) {
   header {
     flex-direction: column;
   }  
+  .header-text {
+    width: 320px;
+  }
+.header-subtext {
+    width: 220px;
+    align-self: center;
+}
+.flashcard-info {
+    margin: auto 2.5em auto 2.5em;
+}
 }

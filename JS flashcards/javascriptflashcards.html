@@ -13,49 +13,94 @@
     <header>
         <div class="header-text">
         <h1>JavaScript Flashcards</h1>
-        <h2>Practice JS terminology and concepts with these easy-to-use flashcards</h2>
+        <h2>Get more familiar with JS terminology and concepts with these easy-to-use flashcards</h2>
         </div>
         <div class="header-subtext">
         <h3>Reinforcing newly-learned concepts is crucial to retaining information.</h3>
-        <p>In addition to hands-on practice, quizzing yourself, or using this as a study tool with others can help solidify that knowlege.</p>
+        <p>Nothing can beat hands-on practice and building your own projects. However, sometimes you just need help memorizing some key fundamentals</p>
         </div>
     </header>
     <main>
+        <div class="flashcard-info">
+            <div class="info-card" id="info-card-1">
+                <p class="bold">Start Here<p>
+                    <br>
+            <p>These flashcards couldn't be simpler to use. Scroll right to learn more...</p>
+            <br>
+            <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </div>
+        <div class="flashcard-info">
         <div class="flashcard-cont" id="flashcard-cont-1">
         <div class="flashcard" id="flashcard-1">
         <div class="flashcard-front">
-            <p>front</p>
+            <h3>Each card has a front and a back</h3>
+            <br>
+            <p>You can start on the front with the term, which may be something like:</p>
+            <br>
             <h5 class="bold">DOM</h5>
-            <p>You can start with the term and provide the definition</p>
+            <br>
+            <p>Then you'll have to think of the answer, which you'll find on the back. <br> <br>(click the card)</p>
         </div>
         <div class="flashcard-back">
             <p>back</p>
+            <br>
             <h5 class="bold">Document Object Model</h5>
-            <p>Or you can start with the definition and name the term</p>
+            <br>
+            <p>Or you can start on the back where you'll find the definition and provide the term</p>
+            <br>
+            <i class="fa-solid fa-arrow-right"></i>
         </div>
         </div>
+        </div>
+    </div>
+        <div class="flashcard-info">
+            <div class="info-card" id="info-card-2">
+            <p> Need to know more? <span id="emphasis">click the link below</span> the term. <br> for example, if the term was:</p>
+            <br>
+            <p class="bold">Camel Case</p>
+                <a href="https://www.freecodecamp.org/news/programming-naming-conventions-explained/#what-is-camel-case" target="_blank">learn more</a>
+               <br> <br>
+                <p>you could click "learn more". That will bring you to a reputable resource, that will give you a more in-depth understanding of this concept.</p>
+                <br>
+            <i class="fa-solid fa-arrow-right"></i>
+            </div>
         </div>
         <div class="flashcard-info">
-            <div class="info-card-1">
-                <h5 class="bold">I needed help!</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia molestiae doloremque modi placeat cum odio sint nesciunt asperiores, aperiam, explicabo aliquid quos expedita sequi, ab blanditiis quo libero veritatis vitae.</p>
-            </div>
-
-            <div class="info-card-2">
-                <h5 class="bold">Click the link.</h5>
-            <p> Need to know more? These links will give you a further example of the concept to help you understand it better.</p>
-            </div>
-            <div class="info-card-3">
+            <div class="info-card" id="info-card-3">
                 <h5 class="bold">Topics and Levels</h5>
+                <br>
             <p>You can fine-tune the level of difficulty and area of study on which you want to concentrate.</p>
-            </div>
-            <div class="info-card-4">
-                <h5 class="bold">Get started</h5>
-            <p>Click here to load the JavaScript flashcards.</p>
+            <br>
+            <input type="radio" id="level-1" name="level" value="level-1" checked>
+            <label for="level-1">Level 1</label><br>
+            <input type="radio" id="level-2" name="level" value="level-2">
+            <label for="level-2">Level 2</label><br>
+            <input type="radio" id="level-3" name="level" value="level-3">
+            <label for="level-3">Level 3</label><br>
+            <div id="coming-soon">Coming Soon...</div>
+            <br>
+            <i class="fa-solid fa-arrow-right"></i>
             </div>
         </div>
-
+        <div class="flashcard-info">
+            <div class="info-card" id="info-card-4">
+                <h5 class="bold">Get started</h5>
+                <br>
+            <p>That's all you need to know. Click the button to start.</p>
+            <br>
+            <a href="#flashcard-live" id="lets-go">Let's Go!</a>
+            </div>
+        </div>
     </main>
+    <section id="flashcard-live">
+    <div>
+        <input type="radio" id="front" name="which-side" value="front">
+        <label for="front">Start with the front side of the card</label>
+        <input type="radio" id="front" name="which-side" value="front">
+        <label for="front">Start with the back side of the card</label>
+    </div>
+</section>
     <script src="javascriptflashcards.js" type="module"></script>
 </body>
 </html>
